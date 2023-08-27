@@ -1,0 +1,16 @@
+//
+//  UIViewController+HidingKeyboard.swift
+//  TestApp
+//
+//  Created by Yulia Ignateva on 10.04.2022.
+//
+
+import UIKit
+
+extension UIViewController {
+    func addTapGestureToHideKeyboard() {
+        let tapGesture = UITapGestureRecognizer(target: view, action: #selector(view.endEditing))
+        tapGesture.cancelsTouchesInView = false
+        view.addGestureRecognizer(tapGesture)
+    }
+}
